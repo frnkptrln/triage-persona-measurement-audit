@@ -1,0 +1,5 @@
+model,model_id,revision,hf_job_id,records,smoke_invalid,smoke_invalid_rate,stopped_after_smoke
+Qwen3-4B,Qwen/Qwen3-4B,1cfa9a7208912126459214e8b04321603b3df60c,6a803d1d1f5885ae605ba969,192,0,0.0,False
+Phi-4 mini,microsoft/Phi-4-mini-instruct,cfbefacb99257ffa30c83adab238a50856ac3083,6a8068d51f5885ae605bacc9,192,0,0.0,False
+SmolLM3-3B,HuggingFaceTB/SmolLM3-3B,a07cc9a04f16550a088caea529712d1d335b0ac1,6a8068e3c97db76cbdf3222b,48,8,0.16666666666666666,True
+OLMo-2 1B,allenai/OLMo-2-0425-1B-Instruct,48d788eca847d4d7548f375ad03d3c9312f6139e,6a8068f21f5885ae605baccb,48,46,0.9583333333333334,True

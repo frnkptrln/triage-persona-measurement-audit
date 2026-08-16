@@ -1,0 +1,3 @@
+model,uncertainty_format_valid,non_directional,non_directional_rate
+Qwen3-4B,96,96,1.0
+Phi-4 mini,96,96,1.0

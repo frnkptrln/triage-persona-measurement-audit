@@ -1,0 +1,8 @@
+model,error,count
+Qwen3-4B,none,0
+Phi-4 mini,none,0
+SmolLM3-3B,choice 'A|B|refuse' is not allowed,8
+OLMo-2 1B,choice 'A|B|equal|uncertain' is not allowed,13
+OLMo-2 1B,choice 'A|B|equal|uncertain|refuse' is not allowed,10
+OLMo-2 1B,choice 'A|B|refuse' is not allowed,22
+OLMo-2 1B,choice 'B|equal' is not allowed,1

@@ -1,0 +1,9 @@
+model,condition,n_items,order_associated_shift
+Qwen3-4B,Neutral,6,0.08333333333333333
+Qwen3-4B,Paraphrase,6,0.3333333333333333
+Qwen3-4B,Analytical,5,0.4
+Qwen3-4B,Coordinator,6,0.16666666666666666
+Phi-4 mini,Neutral,6,0.6666666666666666
+Phi-4 mini,Paraphrase,4,0.875
+Phi-4 mini,Analytical,3,0.8333333333333334
+Phi-4 mini,Coordinator,6,0.5833333333333334

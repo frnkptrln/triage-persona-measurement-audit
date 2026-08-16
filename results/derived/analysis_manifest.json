@@ -1,0 +1,52 @@
+{
+  "analysis_script_sha256": "a55d8d7d153c7d0ed074b7ca1105312a7e6909e84d3cdf22c2fcb04e03f5b3df",
+  "claim_boundary": "Descriptive results for four selected checkpoints and six fixed items; no population inference over models, scenarios, people, or real triage decisions.",
+  "instrument_id": "triage-persona-v0.1-20260815",
+  "raw_artifacts": {
+    "olmo2-1b.json.gz": {
+      "hf_job_id": "6a8068f21f5885ae605baccb",
+      "model": {
+        "chat_template": true,
+        "enable_thinking": false,
+        "id": "allenai/OLMo-2-0425-1B-Instruct",
+        "revision": "48d788eca847d4d7548f375ad03d3c9312f6139e"
+      },
+      "records": 48,
+      "sha256": "009bfe5af636ff0802bf2cf6dbbb5e1ea246bd75413e3d982ba61f6a9435e737"
+    },
+    "phi-4-mini.json.gz": {
+      "hf_job_id": "6a8068d51f5885ae605bacc9",
+      "model": {
+        "chat_template": true,
+        "enable_thinking": false,
+        "id": "microsoft/Phi-4-mini-instruct",
+        "revision": "cfbefacb99257ffa30c83adab238a50856ac3083"
+      },
+      "records": 192,
+      "sha256": "a10a1fa680362390302015947f55c3e0308be217899b7aa9708b11ba5f3dfb2d"
+    },
+    "qwen3-4b.json.gz": {
+      "hf_job_id": "6a803d1d1f5885ae605ba969",
+      "model": {
+        "chat_template": true,
+        "enable_thinking": false,
+        "id": "Qwen/Qwen3-4B",
+        "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
+      },
+      "records": 192,
+      "sha256": "d589bf5b36e6ef9f58b924378727dc78c45e76a108c6a04d8be7308aa2f70ca4"
+    },
+    "smollm3-3b.json.gz": {
+      "hf_job_id": "6a8068e3c97db76cbdf3222b",
+      "model": {
+        "chat_template": true,
+        "enable_thinking": false,
+        "id": "HuggingFaceTB/SmolLM3-3B",
+        "revision": "a07cc9a04f16550a088caea529712d1d335b0ac1"
+      },
+      "records": 48,
+      "sha256": "d72090006aa593d2d6bd0e1efd2c5e38433736f0349e3f6fae2a9857c4bf6400"
+    }
+  },
+  "schema_version": 1
+}
