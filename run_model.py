@@ -9,7 +9,7 @@ import gzip
 import hashlib
 import json
 import re
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -99,7 +99,7 @@ def generate_one(model, tokenizer, torch, record: dict[str, Any]) -> dict[str, A
     result.update(
         {
             "seed_effective": seed,
-            "called_at_utc": datetime.now(UTC).isoformat(),
+            "called_at_utc": datetime.now(timezone.utc).isoformat(),
             "raw_output": raw,
             "parser_route": route,
         }
@@ -229,7 +229,7 @@ def run(
             "records_completed": len(outputs),
             "gpu": torch.cuda.get_device_name(0),
             "peak_cuda_gib": torch.cuda.max_memory_allocated() / 2**30,
-            "finished_at_utc": datetime.now(UTC).isoformat(),
+            "finished_at_utc": datetime.now(timezone.utc).isoformat(),
         },
     }
 
