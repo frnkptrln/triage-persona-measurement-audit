@@ -81,6 +81,21 @@ pytest
 python scripts/analyze_multimodel.py
 ```
 
+For a read-only check of the archived evidence:
+
+```bash
+MPLBACKEND=Agg python scripts/check_archived_analysis.py
+```
+
+The checker verifies all four compressed-run hashes and model metadata, checks
+that the measurement fields agree with the frozen instrument, reruns the existing
+analysis in a temporary directory, and compares all five tables and the provenance
+manifest with the archive. It also renders the figure in that temporary directory;
+figure pixels are not compared. The original analysis script and all archived
+inputs/results remain byte-for-byte unchanged. A changed table or raw artifact
+causes a nonzero exit. This is reanalysis of 480 archived completions, with no new
+model calls. CI runs the read-only check and tests using the analysis extras only.
+
 Validate or inspect the instrument:
 
 ```bash
