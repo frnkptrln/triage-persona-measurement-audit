@@ -3,6 +3,11 @@
 Reproducibility repository for a preregistered, multi-model measurement audit
 conducted during the Digital Minds Research Sprint (August 2026).
 
+**Submitted state.** The repository as it stood at the sprint submission is
+commit [`e065574`](https://github.com/frnkptrln/triage-persona-measurement-audit/commit/e065574873bfc2da03a1a4b8f5abaec65b561e78) (16 August 2026), tagged `submitted`. Everything
+after it is dated and says what it changes relative to that state; the frozen
+instrument and the archived completions and tables do not change.
+
 ## Research question
 
 Do deliberately strong role framings change a language model's choices in
