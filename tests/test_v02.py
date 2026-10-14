@@ -252,4 +252,3 @@ def test_cli_fresh_plan_and_audit_preserve_raw_bytes(tmp_path, monkeypatch, spec
     assert report["observed_calls"] == 96
     assert report["all_planned_calls_observed"] is True
     assert report["seed_support_verified_by_auditor"] is False
-
