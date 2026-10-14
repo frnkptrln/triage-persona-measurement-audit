@@ -14,7 +14,7 @@ model = ["torch>=2.4", "transformers>=4.54", "accelerate>=1.2"]
 dev = ["pytest>=8.0", "ruff>=0.6"]
 
 [tool.setuptools]
-py-modules = ["triage_persona_instrument", "run_model"]
+py-modules = ["triage_persona_instrument", "run_model", "triage_persona_v02"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

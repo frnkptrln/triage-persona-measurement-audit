@@ -65,6 +65,8 @@ schema compatibility.
 | --- | --- |
 | `spec.json` | Frozen v0.1 instrument |
 | `triage_persona_instrument.py` | Validation, export, canonicalization, and summaries |
+| `extensions/2026-10-14/spec-v0.2.json` | Proposed dated response-schema and paired-order extension |
+| `triage_persona_v02.py` | Offline v0.2 request planner and raw-completion auditor |
 | `run_model.py` | Pinned one-record-per-call GPU runner with smoke gate |
 | `scripts/analyze_multimodel.py` | Cross-model validation, tables, and figure |
 | `docs/` | Original preregistration and prospective extension plan |
@@ -112,6 +114,39 @@ python triage_persona_instrument.py export --profile smoke --output prompts.json
 GPU generation additionally requires the model extras and explicit pinned
 model identifiers/revisions. See `run_model.py --help` and the archived
 `results/derived/model_outcomes.csv`.
+
+## Proposed v0.2 measurement pilot
+
+The [dated extension plan](docs/paired-order-pilot-2026-10-14.md) and
+[new spec](extensions/2026-10-14/spec-v0.2.json) prepare a separate pilot that
+omits literal answer examples and requests both A/B orientations for each
+stochastic block. The existing six items, four conditions, response sets, and
+decoding settings remain. This is a measurement pilot, not a broader scenario
+study. The proposal is `needs Frank`; no v0.2 model calls or results exist.
+
+```bash
+python triage_persona_v02.py validate
+python triage_persona_v02.py plan \
+  --model-id Qwen/Qwen3-4B \
+  --model-revision 1cfa9a7208912126459214e8b04321603b3df60c \
+  --profile pilot \
+  --requests out/v02-pilot-requests.jsonl \
+  --output out/v02-pilot-plan.json
+```
+
+These commands only validate and export local files. The historical checkpoint
+is an example; it is not loaded or called. A pilot plans 384 calls per model:
+96 smoke calls reused within the pilot, then 288 remaining calls only if smoke
+passes. Requested seeds match within each canonical/reversed block; runtime
+support defaults to unknown and must be evidenced before seed-matched claims.
+The strict validator retains raw and parsed invalid outputs without repairing
+values. The auditor checks supplied data and smoke membership; it cannot verify
+actual call chronology or independent runtime seed behavior. See the extension
+plan for completion-file auditing and interpretation limits.
+
+Use fresh output destinations. Existing destinations and input/output aliases
+are refused before writes. Keep new outputs outside the frozen archive. The frozen
+v0.1 instrument and submitted archive remain unchanged.
 
 ## Data and claim boundary
 
